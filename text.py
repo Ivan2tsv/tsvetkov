@@ -1,2 +1,2 @@
 name = input()
-print('Привет, рад встречи,', name)
+print('Привет, рад встречи,', name, 'Taste  fortune')
