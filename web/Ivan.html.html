@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Журнал случайных оценок</title>
+  <meta charset="UTF-8">
+  <style type="text/css">
+  body{
+    background: #30d5c8;
+  }
+  table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td, th{
+    border: 2px solid black;
+  }
+  </style>
+</head>
+<body>
+  <h1 align="center">Taste your fortune!</h1>
+  <table id="journal">
+    <tr>
+      <th>Максим</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Илья</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Миша</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Терентий</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Егор</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+  </table>
+  <script>
+    let cells = document.querySelectorAll("#journal td");
+
+    for (let cell of cells) {
+      let mark = Math.floor(Math.random() * 4) + 2;
+      let colors = {
+        2: "orange",
+        3: "yellow",
+        4: "blue",
+        5: "lime",
+      };
+      cell.innerText = String(mark);
+      cell.style.backgroundColor = colors[mark];
+    }
+    </script>
+</body>
+</html>
